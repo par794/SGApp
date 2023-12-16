@@ -26,6 +26,13 @@
         </tr>
       </thead>
       <tbody>
+      $mysqlHost = getenv('MYSQL_HOST');
+      $mysqlUser = getenv('MYSQL_USER');
+      $mysqlPassword = getenv('MYSQL_PASSWORD');
+
+      error_log("MYSQL_HOST: " . $mysqlHost);
+      error_log("MYSQL_USER: " . $mysqlUser);
+      error_log("MYSQL_PASSWORD: " . $mysqlPassword);
         <?php
 
         $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "SG");
